@@ -1,0 +1,48 @@
+{
+  "compilerOptions": {
+    "module": "esnext",
+    "target": "es5",
+    "lib": ["es2020", "dom"],
+    "jsx": "preserve",
+    "moduleResolution": "node",
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "noEmit": true,
+    "experimentalDecorators": true,
+    "baseUrl": "./",
+    "allowSyntheticDefaultImports": true,
+    "noErrorTruncation": false,
+    "allowJs": true,
+    "paths": {
+      "@mak/material": ["./packages/mak-material/src"],
+      "@mak/material/*": ["./packages/mak-material/src/*"],
+      "@mak/lab": ["./packages/mak-lab/src"],
+      "@mak/lab/*": ["./packages/mak-lab/src/*"],
+      "@mak/markdown": ["./packages/markdown"],
+      "@mak/styled-engine": ["./packages/mak-styled-engine/src"],
+      "@mak/styled-engine/*": ["./packages/mak-styled-engine/src/*"],
+      "@mak/styled-engine-sc": ["./packages/mak-styled-engine-sc/src"],
+      "@mak/styled-engine-sc/*": ["./packages/mak-styled-engine-sc/src/*"],
+      "@mak/styles": ["./packages/mak-styles/src"],
+      "@mak/styles/*": ["./packages/mak-styles/src/*"],
+      "@mak/system": ["./packages/mak-system/src"],
+      "@mak/system/*": ["./packages/mak-system/src/*"],
+      "@mak/private-theming": ["./packages/mak-private-theming/src"],
+      "@mak/private-theming/*": ["./packages/mak-private-theming/src/*"],
+      "@mak/types": ["./packages/mak-types/src"],
+      "@mak/base": ["./packages/mak-base/src"],
+      "@mak/base/*": ["./packages/mak-base/src/*"],
+      "@mak/docs": ["./packages/mak-docs/src"],
+      "@mak/docs/*": ["./packages/mak-docs/src/*"],
+      "@mak/material-next": ["./packages/mak-material-next/src"],
+      "@mak/material-next/*": ["./packages/mak-material-next/src/*"],
+      "@mak/joy": ["./packages/mak-joy/src"],
+      "@mak/joy/*": ["./packages/mak-joy/src/*"],
+      "test/*": ["./test/*"],
+      "typescript-to-proptypes": ["./packages/typescript-to-proptypes/src"]
+    },
+    // Otherwise we get react-native typings which conflict with dom.lib.
+    "types": ["node", "react"]
+  },
+  "exclude": ["**/.*/", "**/build", "**/node_modules", "docs/export"]
+}

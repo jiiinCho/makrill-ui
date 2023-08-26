@@ -1,0 +1,21 @@
+{
+    // This config is for emitting declarations (.d.ts) only
+    // Actual .ts source files are transpiled via babel
+    "extends": "./tsconfig",
+    "compilerOptions": {
+      "composite": true,
+      "declaration": true,
+      "noEmit": false,
+      "emitDeclarationOnly": true,
+      "outDir": "build",
+      "rootDir": "./src"
+    },
+    "include": ["./src/**/*.ts*"],
+    "exclude": ["src/**/*.spec.ts*", "src/**/*.test.ts*"],
+    // https://www.typescriptlang.org/docs/handbook/project-references.html#what-is-a-project-reference
+    "references": [
+      { "path": "../mak-base/tsconfig.build.json" },
+      { "path": "../mak-system/tsconfig.build.json" }
+    ]
+  }
+  
